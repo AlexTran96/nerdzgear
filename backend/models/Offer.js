@@ -23,6 +23,18 @@ module.exports = (sequelize, DataTypes) => {
         phone: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        model: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        condition: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        price: {
+            type: DataTypes.DOUBLE,
+            allowNull: false
         }
       }, {    
         sequelize,

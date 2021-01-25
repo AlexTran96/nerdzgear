@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>NerdGearz | Buyback</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+  />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Custom styles -->
+  <style></style>
+</head>
+<body>
+  <!-- Start your project here-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img
+        src="img/logo.png"
+        height="30"
+        alt=""
+        loading="lazy"
+        />
+      </a>
+      <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <div class="navbar-nav">
+        <a class="nav-link" href="https://store.nergearz.com">BUY</a>
+        <a class="nav-link active" href="#startnow">SELL</a>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#questions">how it works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">track offers</a>
+        </li>
+      </ul>
+      <a href="#startnow" class="btn btn-outline-dark" role="button" aria-pressed="true">Sell Now</a>
+    </div>
+  </div>
+</nav>
+<!-- End your project here-->
+<!-- get quote -->
+<section id="startnow"class="pt-5" style="background-image: url('img/bg.jpg');">
+  <div class="container py-5">
+    <h1 class="display-4 text-center">We Buy Your Old Gears</h1>
+    <p class="text-center">The process is fast, the service is free. It's time to make money off that old gears, simple and easy.</p>
+    <hr class="my-5"/>
+    <ul class="stepper" data-mdb-stepper="stepper" data-mdb-stepper-type="vertical">
+      <li class="stepper-step stepper-active">
+        <div class="stepper-head">
+          <span class="stepper-head-icon"> 1 </span>
+          <span class="stepper-head-text"> Get Your Quote </span>
+        </div>
+        <div class="stepper-content py-3">
+          <div class="row input-select-quote">
+            <div class="col-12 col-md-4 mb-4">
+              <select class="select">
+                <option value="1">Graphics Cards</option>
+                <option value="2">Power Supply</option>
+                <option value="3">CPU</option>
+                <option value="4">Hardware Sets</option>
+                <option value="5">Accessories</option>
+              </select>
+              <label class="form-label select-label">Device type</label>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+              <select class="select input-get-quote" disabled>
+                <option value="1">Loading...</option>
+                <option value="2">Power Supply</option>
+                <option value="3">CPU</option>
+                <option value="4">Hardware Sets</option>
+                <option value="5">Accessories</option>
+              </select>
+              <label class="form-label select-label">Brands</label>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+              <select class="select input-get-quote" disabled>
+                <option value="1">Loading...</option>
+                <option value="2">Power Supply</option>
+                <option value="3">CPU</option>
+                <option value="4">Hardware Sets</option>
+                <option value="5">Accessories</option>
+              </select>
+              <label class="form-label select-label">Model</label>
+            </div>
+          </div>
+          <div class="row">
+            <p class="note quote-info mx-2">
+              <strong>Your Quote:</strong> Please select your device
+            </p>
+          </div>
+        </li>
+        <li class="stepper-step">
+          <div class="stepper-head">
+            <span class="stepper-head-icon"> 2 </span>
+            <span class="stepper-head-text"> Your Contact </span>
+          </div>
+          <div class="stepper-content py-3">
+            <div class="row input-select-quote">
+              <div class="col-12 col-md-6">
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="firstname" class="form-control" />
+                      <label class="form-label" for="firstname">First name</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="lastname" class="form-control" />
+                      <label class="form-label" for="lastname">Last name</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="email" class="form-control" />
+                  <label class="form-label" for="email">Email address</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="tel" id="typePhone" class="form-control" />
+                  <label class="form-label" for="typePhone">Phone number</label>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  id="subscribe"
+                  checked
+                  />
+                  <label class="form-check-label" for="form2Example3">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block mb-4">Submit</button>
+              </div>
+              <div class="col-12 col-md-6">
+                <p>Dignissim diam quis enim lobortis scelerisque fermentum. Duis ultricies lacus sed turpis. Tristique risus nec feugiat in fermentum. Arcu dui vivamus arcu felis bibendum ut tristique et. Dui ut ornare lectus sit amet est placerat in. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Dui accumsan sit amet nulla. Dignissim convallis aenean et tortor at. Ullamcorper velit sed ullamcorper morbi tincidunt ornare. Elit sed vulputate mi sit amet mauris commodo quis. A cras semper auctor neque vitae.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- Steps -->
+  <section id="features" class="bg-dark py-4">
+    <div class="container text-white">
+      <div class="row py-md-5">
+        <div class="col-lg-4 col-md-6">
+          <h4 class="font-weight-bold mb-3">
+            <i class="fas fa-receipt"></i> Get an offer
+          </h4>
+          <p class=" text-white">
+            Select your device model and answer a few questions to receive your trade-in quote.
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="font-weight-bold mb-3">
+            <i class="fas fa-box"></i> Ship it free
+          </h4>
+          <p class="text-white">
+            We’ll send you prepaid shipping supplies so you can send in your device at no cost.
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="font-weight-bold mb-3">
+            <i class="fas fa-donate"></i> Get Paid Easily
+          </h4>
+          <p class="text-white">
+            Especially, you'll get 10% more when you choose to get paid by NerdGearz's store credit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Slides -->
+  <section id="navtwopages" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="bg-image ripple" data-mdb-ripple-color="light">
+            <img src="img/buy-btn.jpg" class="w-100" />
+            <a href="https://store.nerdgearz.com">
+              <div
+              class="mask">
+              <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="text-white mb-0">BUY</h1>
+                <h2 class="text-white mb-0"><br>SMART</h2>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div
+              class="mask"
+              style="background: linear-gradient(
+                45deg,
+                rgba(29, 236, 197, 0.5),
+                rgba(91, 14, 214, 0.5) 100%
+                );">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <h1 class="text-white mb-0">BUY</h1>
+                  <h2 class="text-white mb-0"><br>SMART</h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="bg-image ripple" data-mdb-ripple-color="light">
+          <img src="img/sell-btn.jpg" class="w-100" />
+          <a href="#startnow">
+            <div
+            class="mask">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <h1 class="text-white mb-0">SELL</h1>
+              <h2 class="text-white mb-0"><br>FAST</h2>
+            </div>
+          </div>
+          <div class="hover-overlay">
+            <div
+            class="mask"
+            style="background: linear-gradient(
+              45deg,
+              rgba(29, 236, 197, 0.5),
+              rgba(91, 14, 214, 0.5) 100%
+              );">
+              <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="text-white mb-0">SELL</h1>
+                <h2 class="text-white mb-0"><br>FAST</h2>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<!-- Questions -->
+<section id="questions" class="py-5">
+  <div class="container">
+    <h1 class="display-5"><i class="far fa-question-circle"></i> Got Questions</h1>
+    <hr class="mb-5" />
+    <div class="row accordion accordion-flush" id="accordionFlushExample">
+      <div class="col-12 col-md-6">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button
+            class="accordion-button collapsed"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+            >
+            How does it work?
+          </button>
+        </h2>
+        <div
+        id="flush-collapseOne"
+        class="accordion-collapse collapse"
+        aria-labelledby="flush-headingOne"
+        data-mdb-parent="#accordionFlushExample"
+        >
+        <div class="accordion-body">
+          <p>It's simple!</p>
+          <p>We've worked hard to make it as easy as can be for you. To find out the value for your device, just follow these steps:</p>
+          <ol>
+            <li>
+              <strong> Find your item on NerdGearz and get an offer</strong>
+              <p>If the item is not on our website, unfortunately we do not accept it. Please do NOT select an item if it does not exactly match your item exactly, we will not be able to offer you anything for it.</p>
+              <p>Once you've found your item, let us know what condition its in by answering a few questions. Please remember the rating of "Flawless" would be for an item which appears and functions as if it has never been used.</p>
+              <p>If you like our offer just complete the checkout process and tell us how you'd like to get paid: Check, PayPal or Amazon.com gift card.</p>
+            </li>
+            <li>
+              <strong>Send us your device</strong>
+              <p>Shipping is FREE! Our offer is good for 30 days but the faster you send it in, the quicker you'll get paid.</p>
+            </li>
+            <li>
+              <strong>Get paid</strong>
+              <p>Once we receive your box, the NerdGearz team will check out the contents and pay you quickly.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#flush-collapseTwo"
+        aria-expanded="false"
+        aria-controls="flush-collapseTwo"
+        >
+        What condition is the item in?
+      </button>
+    </h2>
+    <div
+    id="flush-collapseTwo"
+    class="accordion-collapse collapse"
+    aria-labelledby="flush-headingTwo"
+    data-mdb-parent="#accordionFlushExample"
+    >
+    <div class="accordion-body">
+      Each listing includes a section that describes the cosmetic and functional condition of the item. We rate the cosmetic condition of the item as "Excellent", "Good", "Fair". While each device may have varying cosmetic conditions, we guarantee that each phone is in perfectly functional working condition.
+    </div>
+  </div>
+</div>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="flush-headingThree">
+    <button
+    class="accordion-button collapsed"
+    type="button"
+    data-mdb-toggle="collapse"
+    data-mdb-target="#flush-collapseThree"
+    aria-expanded="false"
+    aria-controls="flush-collapseThree"
+    >
+    Is my personal information safe with NerdGearz?
+  </button>
+</h2>
+<div
+id="flush-collapseThree"
+class="accordion-collapse collapse"
+aria-labelledby="flush-headingThree"
+data-mdb-parent="#accordionFlushExample"
+>
+<div class="accordion-body">
+  <p>NerdGearz never sells or shares any of your personal information unless you have specifically opted in to receive offers from our partners.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingFour">
+      <button
+      class="accordion-button collapsed"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#flush-collapseFour"
+      aria-expanded="false"
+      aria-controls="flush-collapseFour"
+      >
+      What happens to all the devices NerdGearz buys?
+    </button>
+  </h2>
+  <div
+  id="flush-collapseFour"
+  class="accordion-collapse collapse"
+  aria-labelledby="flush-headingFour"
+  data-mdb-parent="#accordionFlushExample"
+  >
+  <div class="accordion-body">
+    <p>NerdGearz believes in reusing products first and recycling when an item no longer has any value. The idea is to keep working products in use as long as possible, extending their life, preventing e-Waste, and ensuring you receive value for the electronics you don't need anymore. It's an idea we call reCommerce.</p>
+    <p>Once we have checked out your item and payment has been sent, we move the item into one of a few directions depending on what it is and what condition it's in.</p>
+    <p>Many of the products sent to NerdGearz still have plenty of life left in them so we find them a new, happy home. We do this by selling many of the items through our NerdGearz store. This is the essence of reCommerce - you sell your unwanted gadgets to us and we extend their life by selling them to someone who wants it. As a result, fewer items get thrown to the landfills or collect dust in a drawer, and fewer people buy brand new gadgets since used ones in great condition are available in the market.</p>
+    <p>Some products that we receive in large quantity are sold to wholesale partners, who aggregate these items and resell them via their own networks globally. A smaller portion of products that are sent to us are at the end of their useful life and are sent to domestic recycling partners who abide by the highest standards.</p>
+    <p>The idea is to optimize where to move things in order to get the best return and therefore offer the best value possible to our customers.</p>
+  </div>
+</div>
+</div>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="flush-headingFive">
+    <button
+    class="accordion-button collapsed"
+    type="button"
+    data-mdb-toggle="collapse"
+    data-mdb-target="#flush-collapseFive"
+    aria-expanded="false"
+    aria-controls="flush-collapseFive"
+    >
+    How long does it take to receive my payment?
+  </button>
+</h2>
+<div
+id="flush-collapseFive"
+class="accordion-collapse collapse"
+aria-labelledby="flush-headingFive"
+data-mdb-parent="#accordionFlushExample"
+>
+<div class="accordion-body">
+  <p>Once we receive your item</p>
+  <p>It should only take a day or two for it to be processed. (It depends on the time of day it gets to us) If the model and condition are confirmed during the inspection, the payment is processed within 3-5 business days.</p>
+  <p>Once Payment is Issued</p>
+  <p>Amazon and PayPal are the fastest ways to get paid, they are sent out electronically and should arrive within 24-48 hours of the payment being processed.</p>
+  <p>Checks are shipped via USPS first class and typically take 5 to 10 days to arrive once the payment is processed.</p>
+  <p>An email will always be sent when a payment is processed and will include details regarding when you can expect to receive it.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="flush-headingSix">
+    <button
+    class="accordion-button collapsed"
+    type="button"
+    data-mdb-toggle="collapse"
+    data-mdb-target="#flush-collapseSix"
+    aria-expanded="false"
+    aria-controls="flush-collapseSix"
+    >
+    I can't find my device on NerdGearz, what should I do?
+  </button>
+</h2>
+<div
+id="flush-collapseSix"
+class="accordion-collapse collapse"
+aria-labelledby="flush-headingSix"
+data-mdb-parent="#accordionFlushExample"
+>
+<div class="accordion-body">
+  <p>If your model is not on our website, then unfortunately we do not accept it for trade.</p>
+  <p>If we receive a different model than what you indicated in your transaction, a revised offer will be sent for as little as $0.00. As with all our offers, if the revised offer does not meet your satisfaction we will return your device - free of charge or offer to responsibly recycle it for you.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Customer -->
+<section id="our-customer">
+  <div class="container my-5">
+    <h1 class="display-5"><i class="far fa-comments"></i> Our Customers</h1>
+    <hr class="mb-5" />
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <figure>
+          <blockquote class="blockquote">
+            <div
+            class="avatar w-100 white d-flex justify-content-center align-items-center"
+            >
+            <img
+            src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+            class="img-fluid rounded-circle z-depth-1"
+            />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+            ante.
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Alan Turing <cite title="Source Title">from Marysville, OH</cite>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="col-12 col-md-4">
+      <figure>
+        <blockquote class="blockquote">
+          <div
+          class="avatar w-100 white d-flex justify-content-center align-items-center"
+          >
+          <img
+          src="https://mdbootstrap.com/img/Photos/Avatars/img%20(5).jpg"
+          class="img-fluid rounded-circle z-depth-1"
+          />
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+          ante.
+        </p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Joanna Thompson <cite title="Source Title">from Sante Fe, OH</cite>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="col-12 col-md-4">
+    <figure>
+      <blockquote class="blockquote">
+        <div
+        class="avatar w-100 white d-flex justify-content-center align-items-center"
+        >
+        <img
+        src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg"
+        class="img-fluid rounded-circle z-depth-1"
+        />
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+        ante.
+      </p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Billy Turner <cite title="Source Title">from Oxnard, CA</cite>
+    </figcaption>
+  </figure>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="text-center text-lg-start" style="background-color: rgba(0, 0, 0, 0.2)">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Footer Content</h5>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+          voluptatem veniam, est atque cumque eum delectus sint!
+        </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 4</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 4</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3 bg-dark text-white">
+    <i class="far fa-copyright"></i>
+    <a class="text-white" href="https://nerdgearz.com/">NerdGearz.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+<!-- MDB -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript"></script>
+</html>
