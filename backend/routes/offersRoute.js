@@ -27,11 +27,12 @@ offersRoute.post('/sendOffer',async(req,res)=>{
         condition = 'Bulk (Grade D)';
     }
 
-    Offer.findOne({where: {email:email, model:model}}).then((resp)=> {
+    Offer.findOne({where: {email:email}}).then((resp)=> {
         if(resp !== null) {
             res.status(202).json({message: "Your quote is being processed"});
         }
         if(resp === null){
+            console.log("resp = null")
             const offerCreated = Offer.create({
                 first_name: fname,
                 last_name: lname,
@@ -41,9 +42,10 @@ offersRoute.post('/sendOffer',async(req,res)=>{
                 condition: condition,
                 price: price
             })
- 
-            if(offerCreated != null){
-                res.status(202).json({mesage: "Your quote had been submitted"});
+            if(offerCreated !== null){
+                res.status(202).json({
+                    message: "Your quote had been submitted"
+                });
             }
             else{
                 res.status(404).json({message: "Something went wrong. Please retry again"})
