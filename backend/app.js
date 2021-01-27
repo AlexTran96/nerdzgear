@@ -21,5 +21,5 @@ app.listen({port: PORT}, async()=> {
 // main()
 
 // Routes
-// app.use('/api/offers', require('./routes/offersRoute'));
+app.use('/api/offers', require('./routes/offersRoute'));
 app.use('/api/parts', require('./routes/partsRoute'));

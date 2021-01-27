@@ -6,31 +6,51 @@ offersRoute.use(express.json());
 
 // Create offer
 offersRoute.post('/sendOffer',async(req,res)=>{
-    let {fname,lname,email,phone,device,model,condition,price} = req.body;
-    email = email.toLowerCase();
-
-    const Offered = await  Offer.findOne({where: {email:email}});
-
-    if (Offered === null) {
-        const offerCreated = Offer.create({
-            fname,
-            lname,
-            email,
-            phone,
-            device,
-            model, 
-            condition,
-            price
-        });
-
-        if(Offered != null) {
-            res.status(200).end();
-        }
-        else{
-            res.status(500);
-            console.log("Can't create offers");
-        }
+    let {fname,lname,email,phone,model,condition,price} = req.body;
+    console.log(fname,lname,email,phone,model,condition,price);
+    if(condition === 'new'){
+        condition = 'New';
     }
+    if(condition === 'used'){
+        condition = 'Used (Normal wear)';
+    }
+    if(condition === 'gradeD'){
+        condition = 'Grade D (Rusty, Subpar)';
+    }
+    if(condition === 'bNew'){
+        condition = 'Bulk (New)';
+    }
+    if(condition === 'bUsed'){
+        condition = 'Bulk (Used)';
+    }
+    if(condition === 'bGrade'){
+        condition = 'Bulk (Grade D)';
+    }
+
+    Offer.findOne({where: {email:email, model:model}}).then((resp)=> {
+        if(resp !== null) {
+            res.status(202).json({message: "Your quote is being processed"});
+        }
+        if(resp === null){
+            const offerCreated = Offer.create({
+                first_name: fname,
+                last_name: lname,
+                email: email,
+                phone: phone,
+                model: model,
+                condition: condition,
+                price: price
+            })
+ 
+            if(offerCreated != null){
+                res.status(202).json({mesage: "Your quote had been submitted"});
+            }
+            else{
+                res.status(404).json({message: "Something went wrong. Please retry again"})
+            }
+        }
+    });
+    
 })
 
 
