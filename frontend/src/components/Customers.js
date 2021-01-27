@@ -19,7 +19,7 @@ const Customers = () => {
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
                                     ante.
-          </p>
+                                </p>
                             </blockquote>
                             <figcaption className="blockquote-footer">
                                 Alan Turing <cite title="Source Title">from Marysville, OH</cite>

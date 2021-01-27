@@ -41,7 +41,7 @@ const Slide = () => {
                             <a href="#startnow">
                                 <div className="mask">
                                     <div className="d-flex justify-content-center align-items-center h-100">
-                                        <h1 className="text-white mb-0">BUY</h1>
+                                        <h1 className="text-white mb-0">SELL</h1>
                                         <h2 className="text-white mb-0"><br />SMART</h2>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@ const Slide = () => {
                                         className="mask"
                                         style={{ background: "linear-gradient(45deg, rgba(29, 236, 197, 0.5),rgba(91, 14, 214, 0.5) 100%)" }}>
                                         <div className="d-flex justify-content-center align-items-center h-100">
-                                            <h1 className="text-white mb-0">BUY</h1>
+                                            <h1 className="text-white mb-0">SELL</h1>
                                             <h2 className="text-white mb-0"><br />SMART</h2>
                                         </div>
                                     </div>
