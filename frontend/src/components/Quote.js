@@ -18,7 +18,7 @@ const Quote = () => {
     const [offerMessage, setOfferMessage] = useState('');
 
     useEffect(() => {
-        Axios(`${API_URL}/parts/stores`)
+        Axios.get(`${API_URL}/parts/stores`)
             .then((resp) => {
                 setList(resp.data)
             })
