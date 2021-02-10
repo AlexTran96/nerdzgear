@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import Axios from 'axios';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://backend-nerdgearz.herokuapp.com/api';
 const Quote = () => {
     const [list, setList] = useState([]);
     const [type, setType] = useState('');
@@ -136,7 +135,6 @@ const Quote = () => {
                             <div className="stepper-content py-3">
                                 <div className="row input-select-quote">
                                     <div className="col-12 col-md-6">
-                                        {/* <form onSubmit={handleSubmit}> */}
                                         {message ? (
                                             <div class="alert alert-primary" role="alert">
                                                 {message}
@@ -189,7 +187,6 @@ const Quote = () => {
                                         </label>
                                         </div>
                                         <button type="submit" className="btn btn-dark btn-block mb-4">Submit</button>
-                                        {/* </form> */}
 
                                     </div>
                                     <div className="col-12 col-md-6">
